@@ -57,11 +57,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/SnD.loader.js";
+      var loaderUrl = buildUrl + "/SnDTextmodHelper.loader.js";
       var config = {
-        dataUrl: buildUrl + "/SnD.data",
-        frameworkUrl: buildUrl + "/SnD.framework.js",
-        codeUrl: buildUrl + "/SnD.wasm",
+        dataUrl: buildUrl + "/SnDTextmodHelper.data",
+        frameworkUrl: buildUrl + "/SnDTextmodHelper.framework.js",
+        codeUrl: buildUrl + "/SnDTextmodHelper.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "testes",
@@ -108,7 +108,7 @@
               }).then((unityInstance) => {
                 loadingBar.style.display = "none";
                 fullscreenButton.onclick = () => {
-                  document.makeFullscreen('unity-container');
+                  unityInstance.SetFullscreen(1);
                 };
               }).catch((message) => {
                 alert(message);
